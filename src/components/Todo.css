@@ -1,0 +1,11 @@
+button {
+	background: none;
+	border-style: none;
+	color: #ffffff;
+	cursor: pointer;
+	transition: 1s easy-in-out;
+}
+button:hover {
+	transform: scale(1.2);
+	background-color: red;
+}

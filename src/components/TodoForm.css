@@ -1,0 +1,35 @@
+.TodoForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	text-align: center;
+}
+
+.TodoForm input {
+	font-size: 20px;
+	width: 50vw;
+	height: 50px;
+	padding: 0 10px;
+	border: 3px solid #a7aaa9;
+}
+
+.TodoForm input:focus {
+	outline-color: #a7aaa9;
+}
+
+.TodoForm button {
+	margin-top: 10px;
+	cursor: pointer;
+	font-size: 40px;
+	border: 2px solid #a7aaa9;
+	background-color: #a7aaa9;
+	color: #ffffff;
+	transition: 1s all;
+}
+
+.TodoForm button:hover {
+	transform: scale(1.1);
+	color: #a7aaa9;
+	background-color: #ffffff;
+}

@@ -1,0 +1,12 @@
+.TodoApp {
+    background: url(https://cdn.stocksnap.io/img-thumbs/960w/JXSAF8KN0P.jpg) 0/cover no-repeat;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+}
