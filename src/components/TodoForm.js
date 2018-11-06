@@ -1,26 +1,47 @@
 import React from "react";
-import style from './TodoForm.css';
+import style from "./TodoForm.css";
 
 class TodoForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            textValue: ''
-        };
-    }
+  constructor() {
+    super();
+    this.state = {
+      textValue: '',
+    };
+  }
 
-    changeText(val) {
-        this.setState({textValue: val});
-    }
+  changeText(event) {
+    this.setState({
+      textValue: event.target.value
+    });
+  }
 
-    render() {
-        return (
-            <div className={style.TodoForm}>
-                <input onChange={ (event) => this.changeText(event.target.value) }/>
-                <button onClick={ () => this.props.addTask(this.state.textValue) }>Add</button>
-            </div>
-        );
-    }
+  onAddTask() {
+    if (this.state.textValue.trim() === "") {
+      this.setState({
+        textValue: ''
+      });
+    } else{
+      this.props.addTask(this.state.textValue);
+      this.setState({
+        textValue: ''
+      });
+  }
+}
+
+  render() {
+    return (
+      <div className={style.TodoForm}>
+        <input
+          value={this.state.textValue}
+          onChange={this.changeText.bind(this)}
+        />
+        <button
+          onClick={this.onAddTask.bind(this)}>
+          Add
+        </button>
+      </div>
+    );
+  }
 }
 
 export default TodoForm;

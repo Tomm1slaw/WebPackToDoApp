@@ -1,9 +1,19 @@
 ul {
 	padding: 0;
-	list-style-type: none;
+    list-style-type: none;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 ul li {
 	text-align: center;
     text-transform: uppercase;
+    font-weight: bold;
     padding: 10px;
+    margin: 10px;
+    border: 3px solid #a7aaa9;
+}
+ul li:hover {
+    background: #a7aaa9;
 }
