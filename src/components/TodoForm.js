@@ -15,18 +15,16 @@ class TodoForm extends React.Component {
     });
   }
 
-  onAddTask() {
-    if (this.state.textValue.trim() === "") {
-      this.setState({
+   onAddTask() {
+    this.state.textValue.trim() === "" ?
+    this.setState({
         textValue: ''
-      });
-    } else{
-      this.props.addTask(this.state.textValue);
-      this.setState({
+      }) :
+    this.props.addTask(this.state.textValue) 
+    this.setState({
         textValue: ''
-      });
+      })
   }
-}
 
   render() {
     return (

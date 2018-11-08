@@ -30,7 +30,6 @@ class App extends React.Component {
             text: val,
             id: uuid.v4(),
         };
-        this.setState({todo});
         const data = [...this.state.data, todo]; // laczy stan aplikacji
         this.setState({data}); // nowe dane
     }
